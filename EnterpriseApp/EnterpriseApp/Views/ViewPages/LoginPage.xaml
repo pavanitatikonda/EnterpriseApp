@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              xmlns:local="clr-namespace:EnterpriseApp.Controls"
+             x:Class="EnterpriseApp.LoginPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="LOGIN" Margin="0,20,0,0" FontSize="Large" HorizontalTextAlignment="Center" TextColor="Black"></Label>
+            <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand" Margin="20,0,20,0">
+                <local:BorderedFrame Margin="0" BorderColor="Gray" Padding="0">
+                    <StackLayout Orientation="Horizontal" Margin="0">
+                        <Image Source="Icon.png"></Image>
+                        <local:EntryRmUnderline Placeholder="E-mail address" x:Name="txtEmail" Margin="0" PlaceholderColor="Black" HorizontalOptions="FillAndExpand"></local:EntryRmUnderline>
+                    </StackLayout>
+                </local:BorderedFrame>
+                <local:BorderedFrame Margin="0" BorderColor="Gray" Padding="0">
+                    <StackLayout Orientation="Horizontal" Margin="0">
+                        <Image Source="Icon.png"></Image>
+                        <local:EntryRmUnderline Placeholder="Password" x:Name="txtPassword" Margin="0" PlaceholderColor="Black" HorizontalOptions="FillAndExpand"></local:EntryRmUnderline>
+                    </StackLayout>
+                </local:BorderedFrame>
+                <local:CurvedButton Text="Sign in" Clicked="Login_Clicked" Margin="5" TextColor="White"></local:CurvedButton>
+            <local:CurvedButton Text="Register" Margin="5" Clicked="Register_Clicked" TextColor="White"></local:CurvedButton>
+            </StackLayout>
+            <StackLayout Margin="20">
+                <local:CurvedButton Image="" TextColor="White" Text="Sign in with Google" Clicked="SignUpWithGoogle"></local:CurvedButton>
+                <local:CurvedButton Image="" TextColor="White" Text="Sign in with Facebook"></local:CurvedButton>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" Margin="20,10,20,10">
+                <Label Text="Forgot Password?" TextColor="Black" HorizontalOptions="StartAndExpand"></Label>
+                <local:UnderLineLabel Text="New here?Sign Up" TextColor="Black" HorizontalOptions="EndAndExpand"></local:UnderLineLabel>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
